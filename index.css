@@ -1,0 +1,533 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    --font-color: rgb(255, 255, 255);
+    scrollbar-width: none;
+}
+
+body {
+    background-color: black;
+}
+
+
+
+
+.navigationbar {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    padding: 0.5em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+    color: aliceblue;
+    background-color: black;
+    position: fixed;
+    z-index: 999;
+}
+
+.logoandsearchbar {
+    display: flex;
+    position: fixed;
+    z-index: 999;
+
+
+}
+
+.logocontainer {
+    width: 1.4em;
+    height: 1.3em;
+    background-color: transparent;
+    border-radius: 500px;
+
+}
+
+.logo {
+    padding-top: 0.2em;
+    padding-right: 1.1rem;
+    text-align: center;
+
+}
+
+.homelogocontainer {
+    width: 1.4em;
+    height: 1.3em;
+    background-color: transparent;
+    border-radius: 500px;
+
+}
+
+.homelogocontainer > a >img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.homelogo {
+    padding-top: 0.2em;
+    padding-right: 1.1rem;
+    text-align: center;
+}
+
+.searchbar {
+    padding-right: 1.1rem;
+    
+
+}
+
+.searchbar>input {
+    font-weight: 400;
+    width: 25.5em;
+    height: 3em;
+    border: none;
+    border-style: none;
+    border-radius: 40px;
+    background-color: rgb(35, 35, 35);
+    color: var(--font-color);
+    position: relative;
+    
+}
+
+.searchbar > img{
+    position:absolute;
+    width: 1.5em;
+    right: 1.5em;
+    top: 0.2em;
+    z-index: 999;
+}
+
+
+.actionlinks {
+    display: flex;
+    margin-left: auto;
+
+}
+
+.navbar ul {
+    padding-top: 0.2em;
+    list-style: none;
+    border-right: 1px solid aliceblue;
+    ;
+}
+
+.navbar ul li {
+    display: inline;
+    padding: 1.1rem;
+}
+
+.navbar ul li:hover{
+   text-decoration: underline;
+}
+
+.actionbuttons ul {
+    list-style: none;
+    padding-top: 0.2em;
+
+}
+
+.actionbuttons ul li {
+    display: inline;
+    padding: 1.1rem;
+}
+.actionbuttons ul li:hover{
+    text-decoration: underline;
+}
+
+.loginbutton>button {
+    font-size: 1.2rem;
+    text-align: center;
+    width: 4em;
+    height: 2em;
+    border-radius: 80px;
+    border: none;
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: background-color 100ms ease-out;
+}
+
+.loginbutton>button:hover {
+    background-color: #1ED760;
+
+}
+
+.main {
+    display: flex;
+    padding: 0.9em 0em;
+}
+
+.aside {
+    width: 40vw;
+    height: 100vh;
+    background-color: black;
+    margin: 3em 0.5em 0.5em;
+}
+
+
+
+.playlist_and_poadcast {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 1.2em;
+    background-color: rgb(17, 17, 17);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.image_library {
+    display: flex;
+    width: 90%;
+    padding-bottom: 1em;
+
+}
+
+
+.your_library {
+    width: 12.8em;
+    color: var(--font-color);
+    font-size: 1.5rem;
+    font-weight: 570;
+    padding-right: 0em;
+    padding-top: 2em;
+}
+
+.samurai {
+    width: 2em;
+    height: 2em;
+    margin: 2.8em 0.8em 0em 0em;
+    border-radius: 500px;
+
+}
+
+.samurai>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.plus_image {
+    width: 2em;
+    height: 2em;
+    margin: 2.8em 0em 0em 0em;
+    border-radius: 500px;
+
+}
+
+.plus_image>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 100ms ease-out  animation 100ms ease-out;
+
+}
+
+.plus_image>img:hover {
+    transform: scale(1.2);
+    animation: rotate 1.5s ease-out 0s 0.2 alternate;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+.playlist {
+    width: 95%;
+    border-radius: 1em;
+    background-color: rgb(35, 35, 35);
+    position: absolute;
+    top: 6em;
+
+
+}
+
+.playlist_headings {
+    padding: 1em;
+}
+
+.playlist_headings>h3 {
+    color: var(--font-color);
+    padding: 0.2em;
+    font-size: 1.2rem;
+}
+
+.playlist_headings>p {
+    color: var(--font-color);
+    padding: 0.3em;
+    font-size: 1rem;
+}
+
+.playlist_headings>button {
+    font-size: 0.9rem;
+    font-weight: 900;
+    width: 9em;
+    height: 2rem;
+    text-align: center;
+    border-radius: 50px;
+    border: none;
+    margin-top: 1em;
+    transition: background-color 100ms ease-out;
+}
+
+.playlist_headings>button:hover {
+    background-color: #1ED760;
+}
+
+.poadcast {
+    width: 95%;
+    border-radius: 1em;
+    background-color: rgb(35, 35, 35);
+    position: absolute;
+    top: 18em;
+
+}
+
+.poadcast_headings {
+    padding: 1em;
+
+}
+
+.poadcast_headings>h3 {
+    color: var(--font-color);
+    padding: 0.2em;
+    font-size: 1.2rem;
+}
+
+.poadcast_headings>p {
+    color: var(--font-color);
+    padding: 0.3em;
+    font-size: 1rem;
+}
+
+.poadcast_headings>button {
+    font-size: 0.9rem;
+    font-weight: 900;
+    width: 10.5em;
+    height: 2rem;
+    text-align: center;
+    border-radius: 50px;
+    border: none;
+    margin-top: 1em;
+    transition: background-color 100ms ease-out;
+}
+
+.poadcast_headings>button:hover {
+    background-color: #1ED760;
+}
+
+.playlist_and_poadcast_footer {
+    font-size: 0.9rem;
+    margin-top: 30em;
+    color: var(--font-color);
+    font-weight: 300;
+}
+
+.playlist_and_poadcast_footer ul {
+    list-style: none;
+    margin-left: -3em;
+
+}
+
+.playlist_and_poadcast_footer li {
+    display: inline-block;
+    padding: 0.3em 0.3em 0.7em;
+
+}
+
+.playlist_and_poadcast_footer li:hover {
+    text-decoration: underline;
+}
+
+.playlist_and_poadcast_footer>button {
+    margin-top: 1em;
+    font-weight: 700;
+    border: 1px solid var(--font-color);
+    border-radius: 40px;
+    width: 8em;
+    height: 2em;
+    background-color: black;
+    color: var(--font-color);
+    transition: background-color .2s ease-out, color 100ms ease-out;
+}
+
+.playlist_and_poadcast_footer>button:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+
+
+.section {
+    font-size: 1rem;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgb(35, 35, 35)5%, rgb(16, 16, 16)20%);
+    border-radius: 1.2em;
+    margin: 3em 0.5em 0.5em;
+    overflow: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    scrollbar-width: none;
+}
+
+.artist_showall {
+    padding: 2em 2em 0em;
+    display: flex;
+    justify-content: space-between;
+    color: var(--font-color);
+}
+
+
+.artist {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.showall {
+    font-size: 1rem;
+    font-weight: 570;
+}
+
+.images {
+    margin-top: 0.6em;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: transparent;
+}
+
+.img1 {
+    width: 8vw;
+    height: 16vh;
+    border-radius: 10em;
+    margin: 0.8em 0.1em;
+    transition: box-shadow 50ms ease-out
+}
+
+.img1:hover {
+    box-shadow: 1px 6px 9px black;
+}
+
+.this_contain_img1 {
+    width: 11vw;
+    height: 28vh;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    border-radius: 9px;
+    transition: background-color 50ms ease-out;
+}
+
+.this_contain_img1:hover {
+    width: 11vw;
+    height: 28vh;
+    background-color: rgb(35, 35, 35);
+    display: flex;
+    justify-content: center;
+    border-radius: 9px;
+}
+
+.img1 > a >img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10em;
+    transform: scale(1);
+    transition: width 50ms ease-out, height 50ms ease-out;
+}
+
+.img1> a >img:hover {
+    transform: scale(1.01);
+}
+
+.Name_of_artist {
+    margin-top: 0.2em;
+    font-weight: 500;
+    color: var(--font-color);
+    text-align: center;
+    padding: 0.2em;
+}
+
+.Speciality {
+    font-weight: 300;
+    color: var(--font-color);
+    text-align: center;
+}
+
+.music_and_playlists {
+    margin-top: 2em;
+}
+
+.discography_showall {
+    padding: 0em 2em 0em;
+    display: flex;
+    justify-content: space-between;
+    color: var(--font-color);
+
+}
+
+.discography {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.images2 {
+    padding: 0em 2em 0em;
+    margin-top: 0.5em;
+    display: flex;
+    justify-content: center;
+
+}
+
+.img2 {
+    width: 12vw;
+    height: 23vh;
+    border-radius: 0.8em;
+    margin: 0.8em;
+
+}
+
+.img2>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.8em;
+}
+
+.main_footer {
+    background: linear-gradient(to right, rgb(255, 0, 255), rgb(63, 121, 255));
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--font-color);
+    padding: 1em;
+    margin: 0em 1.1em 0.5em;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.main_footer>button {
+    margin-top: 1em;
+    font-weight: 700;
+    border: none;
+    border-radius: 40px;
+    width: 8em;
+    height: 3em;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    transition: background-color .2s ease-out;
+}
+
+.main_footer>button:hover {
+    background-color: rgb(116, 231, 67);
+}
+.section > p{
+    font-size:1.2em;
+    color: grey;
+    margin:0em 2.4em 5em;
+}
